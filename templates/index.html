@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+</head>
+<body>
+  <h1>
+    Currency calculator
+  </h1>
+  <form method="post">
+  <div>
+    <label>The amount of money to be transferd to PLN:</label>
+    <input type="number" name="amount" placeholder="Enter amount">
+  </div>
+  <div></div>
+  <div>
+    <label>Choose the currency to be transferd to PLN:</label>
+    <select name="currency">
+      {% for item in items %}
+      <option >{{item['code']}}</option>
+      {% endfor %}
+      </select> 
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</body>
+</html>
